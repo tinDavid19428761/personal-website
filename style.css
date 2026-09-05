@@ -1,0 +1,417 @@
+/* =========================================================
+   Portfolio — minimalist, black & white, Helvetica only
+   ========================================================= */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #777777;
+  --line: #000000;
+  --gap: 2rem;
+  --max-width: 880px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Layout shell ---------- */
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Header / nav ---------- */
+
+header.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.site-logo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav.site-nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a:focus-visible,
+nav.site-nav a[aria-current="page"] {
+  border-bottom: 1px solid var(--black);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 3px;
+}
+
+/* ---------- Main / page sections ---------- */
+
+main {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+  min-height: 60vh;
+}
+
+.page-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- Home page ---------- */
+
+.intro {
+  padding-top: 1rem;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+  max-width: 18ch;
+}
+
+.intro p {
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin: 0 0 1.25rem;
+}
+
+.intro .signature {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.home-links {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.home-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.home-links a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.home-links a:hover,
+.home-links a:focus-visible {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* ---------- Music page ---------- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.video-slot {
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.video-slot .caption {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--black);
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Placeholder shown until a real embed is added */
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+.video-placeholder .plus {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.video-placeholder .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  max-width: 28ch;
+}
+
+/* ---------- Visual art page ---------- */
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.art-slot {
+  border: 1px dashed var(--line);
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.art-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.art-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray);
+  text-align: center;
+  padding: 1rem;
+}
+
+.art-placeholder .plus {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--black);
+}
+
+.art-placeholder .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.art-slot figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.6rem;
+}
+
+/* ---------- Essays page ---------- */
+
+.essay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.essay-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.essay-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 1.1rem 0;
+}
+
+.essay-list a:hover .essay-title,
+.essay-list a:focus-visible .essay-title {
+  text-decoration: underline;
+}
+
+.essay-title {
+  font-size: 1.05rem;
+}
+
+.essay-date {
+  font-size: 0.8rem;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+/* ---------- Essay article page ---------- */
+
+.essay-article h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin: 0 0 0.5rem;
+  max-width: 24ch;
+}
+
+.essay-meta {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin: 0 0 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.essay-article p {
+  max-width: 65ch;
+  font-size: 1rem;
+  margin: 0 0 1.25rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--black);
+}
+
+/* ---------- Footer ---------- */
+
+footer.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.site-nav ul {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .home-links ul {
+    grid-template-columns: 1fr;
+  }
+
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

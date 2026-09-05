@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music — Your Name</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-title" href="index.html">
+      <img class="site-logo" src="favicon.png" alt="">
+      <span>Your Name</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html" aria-current="page">Music</a></li>
+        <li><a href="art.html">Visual Art</a></li>
+        <li><a href="essays.html">Essays</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="page-title">Music</p>
+
+    <div class="video-grid">
+
+      <!--
+        HOW TO ADD A TRACK:
+        1. Get the YouTube embed URL, e.g. https://www.youtube.com/embed/VIDEO_ID
+        2. Delete the <div class="video-placeholder">...</div> block below.
+        3. Uncomment the <iframe> tag and paste your URL into the src attribute.
+        4. Update the caption text above it.
+        Repeat this whole <div class="video-slot"> block for each track.
+      -->
+
+      <div class="video-slot">
+        <p class="caption">Track 01 — Title goes here</p>
+        <div class="video-frame">
+          <div class="video-placeholder">
+            <span class="plus">+</span>
+            <span class="label">Embed YouTube video here</span>
+          </div>
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Track 01" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+      </div>
+
+      <div class="video-slot">
+        <p class="caption">Track 02 — Title goes here</p>
+        <div class="video-frame">
+          <div class="video-placeholder">
+            <span class="plus">+</span>
+            <span class="label">Embed YouTube video here</span>
+          </div>
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Track 02" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+      </div>
+
+      <div class="video-slot">
+        <p class="caption">Track 03 — Title goes here</p>
+        <div class="video-frame">
+          <div class="video-placeholder">
+            <span class="plus">+</span>
+            <span class="label">Embed YouTube video here</span>
+          </div>
+          <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Track 03" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; 2026 Your Name
+  </div>
+</footer>
+
+</body>
+</html>
